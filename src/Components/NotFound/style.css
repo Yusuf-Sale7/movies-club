@@ -1,0 +1,36 @@
+.not-found {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 120px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.not-found img {
+  height: 450px;
+  position: absolute;
+  right: 15%;
+  bottom: 0;
+}
+
+.not-found .message {
+  margin-left: 100px;
+  max-width: 40%;
+}
+
+.not-found .message h3 {
+  font-weight: bold;
+}
+
+.not-found .message h5 {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.not-found .message p {
+  color: #032541;
+}
+

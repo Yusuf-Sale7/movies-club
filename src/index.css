@@ -1,13 +1,236 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Josefin Sans'!important;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+/*--- Override UiKit Style ---*/
+.uk-navbar-item, .uk-navbar-nav > li > a, .uk-navbar-toggle {
+  min-height: 60px!important;
+  font-family: 'Josefin Sans'!important;
+}
+
+/* Pagination */
+.uk-pagination button {
+  background: transparent;
+  border: 1px solid #032541;
+  color: #032541;
+  border-radius: 50px;
+  padding: 8px 20px;
+  transition: all 0.3 ease-in;
+}
+
+.uk-pagination button:hover {
+  background: #032541;
+  color: #fff;
+}
+
+/* Tabs */
+.uk-tab {
+  display: inline-block!important;
+  margin-left: 0!important;
+  position: relative!important;
+  top: -3px;
+  background-color: #ececec;
+  border-radius: 50px;
+}
+
+.uk-tab::before {
+  display: none;
+}
+
+.uk-tab li {
+  display: inline-block;
+  padding: 0;
+}
+
+.uk-tab li a {
+  display: inline-block;
+  border-bottom: none;
+  border-radius: 50px;
+  padding: 5px 20px;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+.uk-tab li.uk-active a {
+  background-color: #032541;
+  color: #fff;
+}
+
+/* Slider Dots */
+.uk-dotnav>* {
+  margin: 0 5px;
+}
+
+.uk-dotnav>*>* {
+  border-color: #032541!important;
+}
+
+.uk-dotnav>.uk-active>* {
+  background-color: #032541!important;
+}
+
+/*--- Global Style Animation ---*/
+.an-skew:hover {
+  animation: skew 0.3s ease-in-out 1;
+}
+
+@keyframes skew {
+  0% {
+    transform: scale(1);
+  } 50% {
+    transform: scale(1.01);
+  } 100% {
+    transform: scale(1);
+  }
+}
+
+/* Progress */
+.vote-average {
+  width: 55px;
+  height: 55px;
+  background-color: #000000;
+  border-radius: 50%;
+  padding: 5px;
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+}
+
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: rgba(255, 255, 255, 0.2)!important;
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: #006e00!important;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+  fill: #ffffff!important;
+  font-size: 30px!important;
+  font-weight: bold!important;
+}
+
+/*--- Global Style ---*/
+
+/* Section Header */
+.section-header {
+  padding: 0 30px;
+}
+
+.section-header h3 {
+  font-size: 30px;
+  position: relative;
+  display: inline-block;
+  padding-left: 18px;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+.section-header h3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 100%;
+  background-color: #032541;
+  border-radius: 10px;
+}
+
+/* Error & Loading Status */
+.display-loading {
+  width: 100%!important;
+  text-align: center;
+}
+
+.display-error {
+  width: 100%!important;
+  text-align: center;
+  padding: 30px;
+}
+
+.display-error img {
+  width: 200px;
+}
+
+.display-error p {
+  font-size: 18px;
+  color: rgb(231, 26, 26);
+  margin-top: 20px;
+}
+
+/* Movie/TV Card */
+.with-cards {
+  padding: 30px 0;
+}
+
+.with-cards .uk-slider {
+  padding: 10px 30px 0 0;
+}
+
+.with-cards .uk-slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0));
+}
+
+.with-cards a {
+  text-decoration: none!important;
+}
+
+.with-cards .uk-panel {
+  height: 250px;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.with-cards .info {
+  padding: 10px 0;
+}
+
+.with-cards .info h5 {
+  font-weight: bold;
+  margin: 5px 0;
+  color: #000;
+}
+
+.with-cards .info p {
+  margin: 0;
+  color: #000;
+}
+
+.with-cards .empty {
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  color: #032541;
+  text-align: center;
 }

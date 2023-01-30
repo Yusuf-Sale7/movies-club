@@ -1,0 +1,25 @@
+header {
+  background-color: #032541;
+}
+
+header nav {
+  background: transparent!important;
+  box-shadow: 0 3px 8px 3px rgba(3, 37, 65, 0.3)
+}
+
+header nav .uk-logo img {
+  width: 45px;
+}
+
+header nav .uk-navbar-nav a.active {
+  color: #fff;
+}
+
+header .uk-dropdown {
+  background-color: #032541;
+  border-radius: 10px;
+}
+
+header nav .uk-dropdown li span {
+  margin-right: 8px;
+}
